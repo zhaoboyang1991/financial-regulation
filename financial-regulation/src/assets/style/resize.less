@@ -1,0 +1,61 @@
+// 注意兼容写法
+
+// pc端------------------------------------------------------------------------------------------------------------------------
+* {
+  font-family: '黑体';
+  padding: 0;
+  margin: 0;
+  display: block;
+  font-size: 100%;
+  font: inherit;
+  line-height: 1; // 行高 = 字号
+  box-sizing: border-box;
+}
+
+a,input,button {
+  outline: none;
+  cursor:pointer;
+  border:0;
+  appearance:none;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ol,ul {
+  list-style: none;
+}
+// 滚动条
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: rgba(0, 0, 0, .2);
+}
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, .2);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(216, 216, 216, .9);
+}
+
+// ---------------------------------移动端-------------------------------------------------------------------------------------------------
+html,body {
+  -webkit-touch-callout:none;/*在iOS上，当你触摸并按住触摸的目标，比如一个链接，Safari浏览器将显示链接有关的系统默认菜单*/
+  -webkit-tap-highlight-color:transparent;/*点击iOS的Safari浏览器中的链接或JavaScript的可点击的元素时，覆盖显示的高亮颜色。transparent表示透明*/
+  -webkit-user-select:none;/*不允许复制文本*/
+}
+
+a {
+  -moz-outline-style:none;
+  -webkit-tap-highlight-color: transparent;/*去除点击高亮*/
+}
+
+input {
+  /* 去除移动端的点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
